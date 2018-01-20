@@ -143,7 +143,7 @@ class Gender(models.Model):
 
 
 class Registration(models.Model):
-	event = models.ForeignKey("Event")
+	event = models.ForeignKey("Event",on_delete=models.CASCADE)
 	username = models.ForeignKey('UserName', related_name='username', blank=True, null=True)
 	email = models.ForeignKey('Email', related_name='Email', blank=True, null=True)
 	phoneno = models.ForeignKey('PhoneNo', related_name='phoneno', blank=True, null=True)
