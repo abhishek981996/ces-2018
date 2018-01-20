@@ -56,7 +56,7 @@ def Events(request):
 			
 			event_list.append(event_dict)
 
-		event_list = list(grouper(3, event_list))
+		event_list = list(grouper(2, event_list))
 		
 		return render(request,"Events.html",{'event_list':event_list})
 	else:
@@ -84,7 +84,7 @@ def AddEvent(request):
 			event_form.save()
 			
 			info.add_message(request, info.INFO, message)
-			return HttpResponseRedirect(Events)
+			return HttpResponseRedirect('/event/view_events/')
 
 	else:
 		eventform = EventForm()
