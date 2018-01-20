@@ -1,0 +1,179 @@
+{% extends 'base.html'%}
+
+{%block title%}
+Add Event
+{% endblock %}
+
+{% block body_block %}
+   <div class="section"></div>
+
+<div id="content" class="" style="min-height: calc(100vh - 165px);">
+  <div class="valign-wrapper">
+    <div class="valign" style="width:100%;">
+  <div class="section" id="form_errors">
+        {% if messages %}
+          <ul class="collection green-text center">
+            {% for message in messages %}
+              <li class="collection-item">{{ message }} </li>
+              {% endfor %}
+                {% endif %}
+      </div
+    
+            {% if error_list %}
+          <ul class="collection red-text">
+            {% for error in error_list %}
+              <li class="collection-item"> {{error}} </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+<div class = "container"> 
+  <div class="col s12 m6 offset-m3">
+      <div class="card z-depth-4">
+      <form method="post" enctype="multipart/form-data">
+           {% csrf_token %}
+          <div class="card  black-text text-darken-2 z-depth-2 hoverable middle">
+                      <div class="card-content  teal lighten-1 white-text ">
+                          <span class="card-title center bold"> Add Event </span>
+                      </div>
+
+                      <div class="section"> </div>
+                      <div class="row">
+                            <div class="input-field col s12 m8 offset-m2">
+                                <label class = "active" for="{{ eventform.Eventname.id_for_label }}"> 
+                                  {{eventform.Eventname.label}} 
+                                </label>
+                                {{ eventform.Eventname}}
+                            </div>
+                        </div>
+                     <div class="row">
+                            <div class="input-field col s12 m8 offset-m2">
+                                <label class = "active" for="{{ eventform.Location.id_for_label }}"> 
+                                  {{eventform.Location.label}} 
+                                </label>
+                                {{ eventform.Location}}
+                            </div>
+                        </div>
+                        
+
+                        
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m8 offset-m2">
+                                {{ eventform.Description }}
+                                <label for="{{ eventform.Description.id_for_label }}"> 
+                                  {{ eventform.Description.label }}
+                                </label>
+                            </div>
+                    </div>
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m8 offset-m2">
+                                {{ eventformextra.Eventdate }}
+                                <label for="{{ eventformextra.Eventdate.id_for_label }}"> 
+                                  {{ eventformextra.Eventdate.label }}
+                                </label>
+                            </div>
+                    </div>
+
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m8 offset-m2 timepicker">
+                                
+                              <label for="{{ eventformextra.EventTime.id_for_label }}"> 
+                                  {{ eventformextra.EventTime.label }}
+                                </label>
+
+                                {{ eventformextra.EventTime }}
+                                
+                            </div>
+                    </div>
+                      <div class="row">
+                        <div class="input-field col s8 offset-s2 m8 offset-m2">
+                                {{ eventformextra.RequiredField }}
+                                <label for="{{ eventformextra.RequiredField.id_for_label }}"> 
+                                  {{ eventformextra.RequiredField.label }}
+                                </label>
+                            </div>
+                    </div> 
+                      <div class="row">
+                        <div class="input-field col s8 offset-s2 m8 offset-m2">
+                                
+                                <label for="{{ eventform.document.id_for_label }}"> 
+                                  {{ eventform.document.label }}
+                                </label>
+                                {{ eventform.document }}
+                            </div>
+                    </div> 
+                    	
+          
+              <div class="section">               
+              </div>
+                    <div class="center">
+                         <button type="submit" class="waves-effect waves-light btn" value="submit">Submit
+                         <i class=" material-icons right">send</i>
+                           </button>
+                        </div>
+                        <div class="section"> </div>
+              </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+{% block custom_js %}
+<script type="text/javascript" charset="utf-8">
+//    $(function() {
+//   $('#id_Eventdate').addClass('datepicker');
+// });
+
+
+$(document).ready(function() {
+    
+   
+    date = $('#id_Eventdate')[0];
+    date.type = "date";
+    date.className = "datepicker";
+  
+ 
+
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: true // Close upon selecting a date,
+  });
+
+    $('.timepicker').pickatime({
+    autoclose: false,
+    twelvehour: true,
+    default: 'now',
+  });
+  });
+  
+  //   $('.timepicker').pickatime({
+  //   default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+  //   fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+  //   twelvehour: false, // Use AM/PM or 24-hour format
+  //   donetext: 'OK', // text for done-button
+  //   cleartext: 'Clear', // text for clear-button
+  //   canceltext: 'Cancel', // Text for cancel-button
+  //   autoclose: false, // automatic close timepicker
+  //   ampmclickable: true, // make AM PM clickable
+  //   aftershow: function(){} //Function for after opening timepicker
+  // });
+
+  // $('.datepicker').pickadate({
+  //   selectMonths: true, // Creates a dropdown to control month
+  //   selectYears: 15, // Creates a dropdown of 15 years to control year,
+  //   today: 'Today',
+  //   clear: 'Clear',
+  //   close: 'Ok',
+  //   closeOnSelect: false // Close upon selecting a date,
+  // });
+
+
+</script> {% endblock %}
+

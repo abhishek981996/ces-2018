@@ -1,0 +1,174 @@
+{% extends 'base.html'%}
+
+{%block title%}
+Registeration for CES
+{% endblock %}
+
+{% block body_block %}
+   <div class="section"></div>
+
+<div id="content" class="" style="min-height: calc(100vh - 165px);">
+  <div class="valign-wrapper">
+    <div class="valign" style="width:100%;">
+    {% if messages %}
+              <div class="row" id="messages"> 
+                <div class="col s12 m6 offset-m3">
+                  <ul class="collection green-text center">
+                    
+                      <li class="collection-item"> {{ messages }} </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            {% endif %}
+    
+            {% if error_list %}
+          <ul class="collection red-text">
+            {% for error in error_list %}
+              <li class="collection-item"> {{error}} </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+<div class = "container"> 
+  <div class="col s12 m6 offset-m3">
+      <div class="card z-depth-4">
+      <form method="post">
+           {% csrf_token %}
+          <div class="card  black-text text-darken-2 z-depth-2 hoverable middle">
+                      <div class="card-content  teal lighten-1 white-text ">
+                          <span class="card-title center bold"> {{event_name}} Registration Form</span>
+                      </div>
+
+                      <div class="section"> </div>
+                      {% if usernameform %}
+                      <div class="row">
+                            <div class="input-field col s12 m8 offset-m2">
+                                <label class = "active" for="{{ usernameform.first_name.id_for_label }}"> 
+                                  {{usernameform.first_name.label}} 
+                                </label>
+                                {{ usernameform.first_name}}
+                            </div>
+                        </div>
+                     <div class="row">
+                            <div class="input-field col s12 m8 offset-m2">
+                                <label class = "active" for="{{ usernameform.last_name.id_for_label }}"> 
+                                  {{usernameform.last_name.label}} 
+                                </label>
+                                {{ usernameform.last_name}}
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        {% if emailForm%}
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m4 offset-m2">
+                                {{ emailForm.emailid }}
+                                <label for="{{ emailForm.emailid.id_for_label }}"> 
+                                  {{ emailForm.emailid.label }}
+                                </label>
+                            </div>
+                    </div>
+                    	{% endif%}
+
+                      {% if admissionnoform%}
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m4 offset-m2">
+                                {{ admissionnoform.admission_no }}
+                                <label for="{{ admissionnoform.admission_no.id_for_label }}"> 
+                                  {{ admissionnoform.admission_no.label }}
+                                </label>
+                            </div>
+                    </div>
+                    	{% endif%}
+
+
+                    	    {% if phonenoform%}
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m4 offset-m2">
+                                {{ phonenoform.phone_number }}
+                                <label for="{{ phonenoform.phone_number.id_for_label }}"> 
+                                  {{ phonenoform.phone_number.label }}
+                                </label>
+                            </div>
+                    </div>
+                    	{% endif%}    
+
+                    		{% if branchform%}
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m4 offset-m2">
+                                {{ branchform.branch_name }}
+                                <label for="{{ branchform.branch_name.id_for_label }}"> 
+                                  {{ branchform.branch_name.label }}
+                                </label>
+                            </div>
+                    </div>
+                      <div class="row">
+                        <div class="input-field col s8 offset-s2 m4 offset-m2">
+                                {{ branchform.degree }}
+                                <label for="{{ branchform.degree.id_for_label }}"> 
+                                  {{ branchform.degree.label }}
+                                </label>
+                            </div>
+                    </div>  <div class="row">
+                        <div class="input-field col s8 offset-s2 m4 offset-m2">
+                                {{ branchform.year }}
+                                <label for="{{ branchform.year.id_for_label }}"> 
+                                  {{ branchform.year.label }}
+                                </label>
+                            </div>
+                    </div>
+                    	{% endif%}
+
+                    	  {% if teamname%}
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m4 offset-m2">
+                                {{ teamname.team_name }}
+                                <label for="{{ teamname.team_name.id_for_label }}"> 
+                                  {{ teamname.team_name.label }}
+                                </label>
+                            </div>
+                    </div>
+                    	{% endif%} 
+
+                    	
+                    	 {% if ideasform%}
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m4 offset-m2">
+                                {{ ideasform.ideas }}
+                                <label for="{{ ideasform.ideas.id_for_label }}"> 
+                                  {{ ideasform.ideas.label }}
+                                </label>
+                            </div>
+                    </div>
+                    	{% endif%}
+
+                     {% if genderform%}
+                     <div class="row">
+                        <div class="input-field col s8 offset-s2 m4 offset-m2">
+                                {{ genderform.genders }}
+                                <label for="{{ genderform.genders.id_for_label }}"> 
+                                  {{ genderform.genders.label }}
+                                </label>
+                            </div>
+                    </div>
+                    	{% endif%}
+          
+              <div class="section">               
+              </div>
+                    <div class="center">
+                         <button type="submit" class="waves-effect waves-light btn" value="submit">Submit
+                         <i class=" material-icons right">send</i>
+                           </button>
+                        </div>
+                        <div class="section"> </div>
+              </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock %}
+

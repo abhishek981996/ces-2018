@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %} Sign In {% endblock %}
+
+{% block custom_css %}
+  <link type="text/css" rel="stylesheet" href="/static/css/form.css" media="screen,projection" />
+{% endblock %}
+
+{% block body_block %} 
+
+<div id="content" class="" style="min-height: calc(100vh - 165px);">
+  <div class="section"> </div>
+  <div class="valign-wrapper">
+    <div class="valign" style="width:100%;">
+        <div class="container">
+            {% if error %}
+              <div class="row" id="messages"> 
+                <div class="col s12 m6 offset-m3">
+                  <ul class="collection red-text center">
+                    
+                      <li class="collection-item"> {{ error }} </li>
+                    
+                  </ul>
+                </div>
+              </div>
+            {% endif %}
+
+            {% if message %}
+              <div class="row" id="form_errors"> 
+                  <div class="col s12 m6 offset-m3">
+                     <ul class="collection center green-text">
+                        <li class="collection-item"> {{message}} </li>
+                     </ul>
+                  </div>
+              </div>
+            {% endif %}
+  
+           <div class="row">
+              <div class="col s12 m6 offset-m3">
+                 <div class="card z-depth-4">
+                    <div class="card-content white-text teal lighten-1 z-depth-1">
+                       <span class="card-title">Sign In</span>
+                    </div>
+
+                    <div class="card-content grey lighten-5">
+                      <form id="login_form" method="post" role="form">
+                          {% csrf_token %}
+
+                          <input type="hidden" name="next" value="{{ request.GET.next }}" />
+
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="username"  name="UserName" type="text" class="validate">
+                              <label for="UserName" class="grey-text text-darken-2">Username</label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input id="password" name="Password" type="password" class="validate">
+                              <label for="Password" class="grey-text text-darken-2">Password</label>
+                            </div>
+                          </div>
+                          
+                          <button type="submit" class="btn waves-effect waves-light white-text" value="Sign In">
+                            Sign In <i class="material-icons right">account_circle</i>
+                          </button>
+                          
+                      </form>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

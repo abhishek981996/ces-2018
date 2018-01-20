@@ -1,0 +1,12 @@
+FirstName = 'FirstName'
+LastName = 'LastName'
+UserName = 'UserName'
+Emailid = 'Emailid'
+AdmissionNo = 'AdmissionNo'
+PhoneNo = 'PhoneNo'
+Year = 'Year'
+Degree = "Degree"
+Branch = 'Branch'
+TeamName = 'TeamName'
+Gender = 'Gender'
+Idea = 'Idea'

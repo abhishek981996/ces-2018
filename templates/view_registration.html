@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+
+{%block title%}
+Total Registrations
+{% endblock %}
+{% block body_block%}
+
+
+
+<div class="section"> </div>
+<div class="container ">
+<div class="container">
+ 
+{% if event_list%}
+	<ul class="collapsible " data-collapsible="accordion">
+
+	{% for event in event_list%}
+  <li>
+    <div class="collapsible-header">
+      <i class="material-icons">filter_drama</i>
+      {{event.event_name}}
+      <span class="new badge">{{event.registraions_count}}</span></div>
+    <div class="collapsible-body"><span>{{event.Description}} .</span>
+    
+    {% if event.registraions_count == 0 %}
+    <a class="waves-effect waves-light btn right disabled" href = "{% url 'ExcelData' event.event_id%}"><i class="material-icons left">assignment</i>Zero data</a>
+    {% else %}
+    <a class="waves-effect waves-light btn right" href = "{% url 'ExcelData' event.event_id%}"><i class="material-icons left">assignment</i>Excel data</a>
+    {% endif %}
+
+    </div>
+
+
+  </li>
+{% endfor %}
+	</ul>
+{% else %}
+	<h5 class="center grey-text text-darken-3"> No Events Available! Create Events First </h5>
+
+	{% endif %}
+</div>
+</div>
+{% endblock%}

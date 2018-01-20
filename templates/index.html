@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <title>Civil Engineering Society - SVNIT Surat</title>
+    <meta charset="utf-8">    
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="Civil Engineering Society">
+    <meta class="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="index.html#">
+
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <!--Icon-->
+    <link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
+    <!-- Plugins CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/superslides.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">	
+
+</head>
+<body>          
+        
+    
+
+    <!--Header-->
+    <header class="cd-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="cd-logo"><a href="index.html#home">
+                            <!--Logo-->
+                            <img src="{% static 'img/small.png' %}" alt="Logo"></a>
+                        </div>
+                        <!-- cd-primary-nav-trigger -->
+                        <a class="cd-primary-nav-trigger">
+                            <span class="cd-menu-text"></span><span class="cd-menu-icon"></span>
+                        </a> <!-- cd-primary-nav-trigger -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header-->
+
+    <!--Menu-->
+    <nav>
+        <ul class="cd-primary-nav">
+            <!--Menu Links-->
+            <li class="">
+                <a class="menu-click" href="{% url 'events' %}">Register Now</a>               
+                <p class="menu-bottom-paragraph wow fadeIn">Register Now</p>
+            </li>
+            <li class="">
+                <a class="menu-click" data-scroll href="index.html#slides">HOME</a>               
+                <p class="menu-bottom-paragraph wow fadeIn hidden-xs">Home</p>
+            </li>
+            <li class="">
+                <a class="menu-click" data-scroll href="index.html#about">ABOUT US</a>                            
+                <p class="menu-bottom-paragraph wow fadeIn hidden-xs">About Us</p>
+            </li>
+            <li class="">                
+                <a class="menu-click" data-scroll href="index.html#team">TEAM</a>                           
+                <p class="menu-bottom-paragraph wow fadeIn hidden-xs">Team</p>
+            </li>
+            <li class="">
+                <a class="menu-click" data-scroll href="index.html#kaizen">KAIZEN 3.0</a>
+                <p class="menu-bottom-paragraph wow fadeIn hidden-xs">CES Fest</p>
+            </li>
+            <li class="">
+                <a class="menu-click" data-scroll href="index.html#contact">CONTACT US</a>
+                <p class="menu-bottom-paragraph wow fadeIn hidden-xs">Contact</p>
+            </li>
+            <!--Social Links-->
+            <li class="social-li">
+                <ul class="social hidden-xs hidden-sm">
+                    <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="index.html#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>  
+            </li>          
+        </ul>
+    </nav> 
+    <!--.Menu-->
+    
+    <!--Slider-->
+    <div id="slides">
+        <ul class="slides-container">
+            <!--Slider 1-->
+            <li>
+                <img src="{% static 'img/front.jpg' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-1 col-lg-11">
+                            <div class="row">
+                                <div class="slides-content">
+                                    <h2 class="slides-big-text"><font color="#ffffff">SVNIT's</font></h2>
+                                    <h3 class="slides-small-text"><font color="#ffffff">Civil Engineering Society</font></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--.Slide 1-->
+
+            <!--Slide 2-->
+            <li>
+                <img src="{% static 'img/slider-2.jpg' %}" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-1 col-lg-11">
+                            <div class="row">
+                                <div class="slides-content">
+                                    <h2 class="slides-small-text"><font color="#1bbc9b">21st and 22nd Jan</font></h2>
+                                    <h1 class="slides-big-text"><font color="#1bbc9b">Kaizen 3.0</font></h1>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </li>
+            <!--.Slide 2-->
+    
+        </ul>
+        <!--Scroll Down-->
+        <div class="scrolldown">
+            <a data-scroll href="index.html#about" class="scroll"></a>
+            <p>SCROLL DOWN</p>
+        </div>
+
+        <!--Slides Navigation-->
+        <nav class="slides-navigation">
+            <div class="customNavigation">   
+                <div class="container">
+                    <div class="row">     
+                        <!--Next-->                           
+                        <a href="index.html#" class="next"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                        <!--Prev-->
+                        <a href="index.html#" class="prev"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+       </nav>
+        
+        <!--Slider Section Title And Line-->
+        <div class="slider-section-line">
+           <div class="container">
+                <div class="row">
+                    <div class="col-lg-1 hidden-md hidden-xs hidden-sm">
+                        <div class="row">
+                            <!--Section Lines-->
+                            <div class="section-lines">
+                                <div class="section-v-title">HOME PAGE</div>
+                                <div class="v-line"></div>
+                                <div class="number">.01</div>
+                            </div>     
+                            <!--.Section Lines-->
+                        </div>
+                    </div>
+                </div>  
+           </div> 
+        </div>
+        <!--.Slider Section Title And Line-->
+    </div>
+    <!--.Slider-->
+
+    <!--About-->
+    <section id="about">
+        <div class="about-top">
+            <div class="container">
+                <div class="row">        
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-lg-1 hidden-md hidden-xs hidden-sm">
+                                <div class="row">
+                                    <!--Section Lines-->
+                                    <div class="section-lines">
+                                        <div class="section-v-title">ABOUT US</div>
+                                        <div class="v-line"></div>
+                                        <div class="number">.02</div>
+                                    </div>     
+                                    <!--.Section Lines-->
+                                </div>
+                            </div> 
+                            <div class="col-lg-5 col-md-6 col-sm-6 hidden-xs">
+                                <div class="row">
+                                    <div class="about-content">
+                                        <!--Image-->
+                                        <div class="h-image">
+                                        <iframe src="{% static 'tp.html' %}" style="background: #242424;" width="400" height="600"></iframe> 
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="row">
+                                    <div class="about-left-content">
+                                        <!--Section Header-->
+                                        <div class="section-header">
+                                            <h2 class="title">CIVIL ENGINEERING SOCIETY</h2>
+                                            <div class="line"></div>
+                                            <!--Section Sub Title-->
+                                            <p class="subtitle">To acquire and enhance knowledge on co-curricular technical things. CES helps to get hold on core topics. CES also helps to aware people about various project and research.</p>
+                                        </div>
+                                        <!--About Boxes-->
+                                        <div class="about-boxes">
+                                            <div class="col-lg-4 col-md-4 col-sm-6 about-box">
+                                                <div class="about-box-content">
+                                                    <!--Image-->
+                                                    <img src="{% static 'img/design.png' %}" alt="">
+                                                    <!--Header-->
+                                                    <h4 class="box-title">Administration</h4>
+                                                    <!--Slogan-->
+                                                    <p class="slogan">TO Learn!</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 about-box">
+                                                <div class="about-box-content">
+                                                    <!--Image-->
+                                                    <img src="{% static 'img/development.png' %}" alt="">
+                                                    <!--Header-->
+                                                    <h4 class="box-title">Increase</h4>
+                                                    <!--Slogan-->
+                                                    <p class="slogan">Creativity and Learning Skills!</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-6 about-box">
+                                                <div class="about-box-content">
+                                                    <!--Image-->
+                                                    <img src="{% static 'img/analytics.png' %}" alt="">
+                                                    <!--Header-->
+                                                    <h4 class="box-title">Enhance</h4>
+                                                    <!--Slogan-->
+                                                    <p class="slogan">Knowledge of Technical Things!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+       <div class="about-bottom">
+            <div class="container">
+                <div class="row">             
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="row bottom-fix">
+                            <div class="col-lg-1 hidden-md hidden-xs hidden-sm">
+                                <div class="row">
+                                    <!--Section Lines-->
+                                    <div class="section-lines">
+                                        <div class="section-v-title"></div>
+                                        <div class="v-line"></div>
+                                    </div>     
+                                    <!--.Section Lines-->
+                                </div>
+                            </div> 
+                            <div class="col-lg-4 col-md-5 col-sm-6 about-bottom-left">
+                                <div class="row">
+                                    <div class="about-content-bottom">
+                                        <div class="section-header">
+                                            <div class="tab-content">
+                                                <!--Tab Panel-->
+                                                <div role="tabpanel" class="tab-pane wow fadeIn active" id="01">
+                                                    <!--Tab Title-->
+                                                    <h2 class="title">Faculty Advisor</h2>
+                                                    <div class="line"></div>
+                                                    <!--Tab Content-->
+                                                    <p class="subtitle">We have following faculty as advisors of CES
+                                                    <br>
+                                                    <br>
+                                                    <br> Dr. C R Patel <br> Mr. Ravin Tailor
+                                                   
+                                                    </p>
+                                                </div>
+                                                <!--.Tab Panel-->
+                                                
+                                               
+                                            </div>
+                                            <ul class="nav nav-tabs" role="tablist">
+                                                <li role="presentation" class="active"><a href="index.html#01" aria-controls="01" role="tab" data-toggle="tab"></a></li>
+                                                
+                                            </ul>
+                                        </div>                                    
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6">
+                                <div class="row">
+                                    <div class="about-bottom-image hidden-xs">
+                                        <!--Image--><center>
+                                      <iframe src="{% static 'training.html' %}"  width="400" height="400"></iframe> </center> 
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--.About-->
+
+    <!--Team-->
+    <section id="team" class="bottom-fix" style="background-color:#242424">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-1 hidden-md hidden-xs hidden-sm">
+                            <div class="row">
+                                <!--Section Lines-->
+                                <div class="section-lines">
+                                    <!--Section Header-->
+                                    <div class="section-v-title">CORE COMMITTEE</div>
+                                    <div class="v-line"></div>
+                                    <div class="number">.03</div>
+                                </div>    
+                                <!--.Section Lines-->
+                            </div>
+                        </div>  
+                        <div class="col-lg-11 col-md-12">
+                            <div class="row">
+                                <div class="team-content">
+                                    <div class="section-header">
+                                        <!--Section Title-->
+                                        <h2 class="title">Meet Our Core Committee</h2>
+                                        <div class="line"></div>
+                                        <!--Section Sub Title-->
+                                        <p class="subtitle">Btech III Core Committee of CES 2016-17.</p>
+                                    </div>
+                                    <div class="customNavigation">
+                                        <a class="prev"><i class="fa fa-chevron-left"></i></a>
+                                        <a class="next"><i class="fa fa-chevron-right"></i></a>
+                                    </div>    
+   
+                                    <div id="owl-team" class="owl-carousel owl-theme">
+                                        <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/DevanshGandhi.jpg' %}" alt="">
+                                                </div>
+
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Devansh Gandhi</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="https://www.facebook.com/devansh.gandhi.161?fref=ts"><i class="fa fa-facebook"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">    
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Head CES</h4>
+                                                            <div class="line"></div>
+                                                            <p> Devansh Gandhi</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                         <!--.Member-->
+                                          <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/abhik1.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Abhik Borthakur</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Technical Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="https://www.facebook.com/abhik.jyoti#"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Technical Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Abhik Borthakur</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                          <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/DevendraRathore.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Devendra Rathore</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Technical Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="https://www.facebook.com/raj.kanwar.1272?fref=ts"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Technical Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Devendra Rathore</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+										<!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/KewalSolanki.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Keval Solanki</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Creative Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="https://www.facebook.com/keval.solanki1?fref=ts"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Creative Head</h4>
+                                                            <div class="line"></div>
+                                                            <p> Keval Solanki </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                        <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/PreetyTiwari.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Preety Tiwari</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Co-Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="https://www.facebook.com/preety.tiwary.56?fref=ts"><i class="fa fa-facebook"></i></a></li>
+                                                      
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Co-Head</h4>
+                                                            <div class="line"></div>
+                                                            <p> Preety Tiwari</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                        
+                                        <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/VinitSoni.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Vinit Soni</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Co-Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                                     
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Co-Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Vinit Soni</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                        
+                                        <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/VikashSharma.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Vikas Sharma</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Co-Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Co-Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Vikas Sharma</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                        
+                                        
+										<!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/ManojKumar.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Manoj Kumar</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Creative Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Creative Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Manoj Kumar</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                        
+                                        <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/Mustafa.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Mustafa</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Creative Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                                       
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Creative Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Mustafa</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                        
+                                        <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/AshutoshBadlawala.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Ashutosh Badlawala</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Creative Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Creative Head</h4>
+                                                            <div class="line"></div>
+                                                            <p> Ashutosh Badlawala </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+
+                                        
+
+
+ <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/VijayMistry.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Vijay Mistry</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Event Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="https://www.facebook.com/vijay.kumar33d?hc_ref=SEARCH&fref=nf"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Event Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Vijay Mistry</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+ <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/AbhishekSingh.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Abhishek Singh</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Event Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Event Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Abhishek Singh</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+
+ <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/RiyaParikh.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Riya Parikh</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Event Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="https://www.facebook.com/riya.parikh.5220?fref=ts"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Event Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Riya Parikh</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+
+ <!--Member-->
+                                        <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/Satwik.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Satwik </h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Treasurer</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="https://www.facebook.com/satwik.rayjada?fref=ts"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Treasurer</h4>
+                                                            <div class="line"></div>
+                                                            <p>Satwik</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                          <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/JayModi.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Jay Modi</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Treasurer</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Treasurer</h4>
+                                                            <div class="line"></div>
+                                                            <p>Jay Modi</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                          <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/HarshJinwala.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Harsh Jinwala</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Photography Head </p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="https://www.facebook.com/harsh.jinwala?fref=ts"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Photography Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Harsh Jinwala</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--.Member-->
+                                          <div class="item">
+                                            <div class="team-member">
+                                                <!--Image-->
+                                                <div class="member-image">
+                                                    <img src="{% static 'core/VigneshMenon.jpg' %}" alt="">
+                                                </div>
+                                                <div class="member-content">
+                                                    <!--Name-->
+                                                    <h4 class="member-name">Vignesh Menon</h4>
+                                                    <!--Title-->
+                                                    <p class="member-title">Photography Head</p>
+                                                    <!--Social-->
+                                                    <ul class="social">
+                                                        <li><a href="index.html#"><i class="fa fa-facebook"></i></a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="team-border">
+                                                    <div class="team-hover">
+                                                        <div class="paragraph">
+                                                            <h4>Photography Head</h4>
+                                                            <div class="line"></div>
+                                                            <p>Vignesh Menon</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--.Team-->
+	
+	<!--Works And Clients-->
+	<section id="worksandclients">
+		<!--Works-->
+		<div id="kaizen" class="bottom-fix">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="row">
+							<div class="col-lg-1 hidden-md hidden-xs hidden-sm">
+                                <div class="row">
+                                   <!--Section Lines-->
+                                    <div class="section-lines">
+                                        <!--Section Header-->
+                                        <div class="section-v-title">KAIZEN 3.0</div>
+                                        <div class="v-line"></div>
+                                        <div class="number">.04</div>
+                                    </div>     
+                                    <!--.Section Lines-->
+                                </div>
+							</div>
+							<div class="col-lg-11">
+								<div class="row">
+                                    <div class="works-content">
+    									<!--Section Title-->
+    									<div class="section-header">
+    			                            <h2 class="title">KAIZEN 3.0</h2>
+    			                            <div class="line"></div>
+    			                        </div>
+                                        <!--Tabs-->
+                                        
+    			                        <div class="tabs-content">
+                                            <ul class="nav nav-tabs works-tabs" role="tablist">
+                                                <li role="presentation" class="active"><a href="index.html#tab1"  role="tab" data-toggle="tab">ALL</a></li>
+                                                <li role="presentation"><a href="index.html#tab2"  role="tab" data-toggle="tab">Events</a></li>
+                                               
+                                            </ul>
+                                            <div class="tab-content">                                            
+                                                <!--Tab Panel-->
+                                                <div role="tabpanel" class="tab-pane active" id="tab1">
+                                                    <div class="works-item">
+                                                        <div id="owl-works-item1" class="owl-works-item owl-carousel owl-theme">
+                                                            <!--Item-->
+                                                            <div class="item">
+                                                                <div class="content-item">
+                                                                    <!--Title-->
+                                                                    <h2 class="works-item-title">Kaizen 3.0</h2> 
+                                                                    <!--Category-->
+                                                                    <h4 class="works-item-category">21st and 22nd January </h4>
+                                                                    <p class="works-item-paragraph">Technical Fest of Civil Engineering Society.</p>
+                                                                    <p class="works-item-date">January 2017</p>
+                                                                </div>
+                                                                <div class="works-img">
+                                                                    <div class="img-item">
+                                                                        <!--Image-->
+                                                                        <img src="{% static 'img/lo.png' %}" alt="" class="img-respons">
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <!--.Item-->
+                                                            
+
+                                                        </div>           
+                                                    </div>
+                                                        
+                                                </div>
+                                                <!--.Tab Panel-->
+                                                
+                                                <!--Tab Panel-->
+                                                <div role="tabpanel" class="tab-pane" id="tab2">
+                                                    <div class="works-item">
+                                                        <div id="owl-works-item2" class="owl-works-item owl-carousel owl-theme">
+                                                            <!--Item-->
+                                                            <div class="item">
+                                                                <div class="content-item">
+                                                                    <!--Title-->
+                                                                    <h2 class="works-item-title">Events</h2> 
+                                                                    <!--Category-->
+                                                                    <h4 class="works-item-category">Overview of Events</h4>
+                                                                    <p class="works-item-paragraph">WORKSHOPS<br>
+				<br>														
+TECHNICAL EVENTS<br>
+			<br>
+QUIZ<br>
+<br>
+MOCK PLACEMENTS<br>
+<br>
+INFORMAL EVENTS<br>
+<br>
+PRESENTATION<br>
+<br>
+EXHIBITIONS <br>
+<br>
+</p>
+                                                                    <p class="works-item-date"></p>
+                                                                </div>
+                                                                <div class="works-img">
+                                                                    <div class="img-item">
+                                                                        <!--Image-->
+                                                                        <img src="{% static 'img/events.jpg' %}" alt="">
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <!--.Item-->
+                                                            
+                                                        </div>           
+                                                    </div>
+                                                    
+                                                </div>
+                                                <!--.Tab Panel-->
+                                                
+                                            </div>                                                               
+                           			    </div>
+                                    </div>
+		                        </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!--.Works-->
+
+	    
+
+    <!--Contact-->
+    <section id="contact">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    				<div class="row">
+						<div class="col-lg-1 hidden-md hidden-xs hidden-sm">
+							<div class="row">
+								<!--Section Lines-->
+                                <div class="section-lines">
+                                    <div class="section-v-title">CONTACT US</div>
+                                    <div class="v-line"></div>
+                                    <div class="number">.05</div>
+                                </div>     
+                                <!--.Section Lines-->
+							</div>
+						</div>
+						<div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 text-center">
+							<div class="row">
+								<div class="contact-content">
+									<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+										<div class="row">
+											<div class="section-header">
+		                                        <h2 class="title">CONTACT</h2>
+		                                        <div class="line"></div>
+		                                        <div class="lines"></div>
+	                                    	</div>
+										</div>
+									</div>
+                                    <!--Address-->
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 home">
+										<div class="row">
+											<i class="fa fa-home"></i>
+											<div class="lines"></div>
+											<p>SVNIT Campus, Ichhanath Surat</p>
+										</div>
+                                    </div>
+                                    <!--Address-->
+
+                                    <!--Telephone-->
+									<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 phone">
+										<div class="row">	
+											<i class="fa fa-phone"></i>
+											<div class="lines"></div>
+											<p>+91 8133086889</p>
+										</div>
+                                    </div>
+                                    <!--.Telephone-->
+
+                                    <!--Email-->
+									<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 mail">
+										<div class="row">
+											<i class="fa fa-envelope-o"></i>
+											<div class="lines"></div>
+											<p>help@ces-svnit.org</p>
+										</div>
+									</div>
+                                    <!--.Email-->
+
+								</div>
+							</div>
+						</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<!--Maps-->     
+        <div id="map"></div>
+        <!--.Maps-->
+    </section>
+    <!--.Contact-->
+
+    <!--Footer-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <div class="row">
+                        <ul>
+                            <!--Logo-->
+                            <li><a href="index.html#" class="logo"><img src="{% static 'img/svnit.png' %}" alt="" height="200" width="200"></a></li>
+                            <li><!--Menu-->
+                                <ul class="menu">
+                                    <li><a data-scroll href="index.html#home">HOME</a></li>
+                                    <li><a data-scroll href="index.html#about">ABOUT US</a></li>
+                                    <li><a data-scroll href="index.html#team">TEAM</a></li>
+                                    <li><a data-scroll href="index.html#kaizen">KAIZEN 3.0</a></li>
+                                    
+                                    <li><a data-scroll href="index.html#contact">CONTACT US</a></li>
+                                </ul>
+                            </li>
+                            <li><div class="footer-line"></div></li>
+                            <li><p class="copyright">COPYRIGHT  2017 <br> CES SVNIT</p></li>
+                            <li>
+                                <!--Social-->
+                            	<ul class="social">
+                            		<li><a href="https://www.facebook.com/ces.nitsurat/"><i class="fa fa-facebook"></i></a></li>
+                            	</ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--.Footer-->
+
+    <script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/smooth-scroll.min.js' %}"></script> 
+    <script src="{% static 'js/jquery.superslides.min.js' %}"></script>     
+    <script src="{% static 'js/retina.min.js' %}"></script>    
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="{% static 'js/gmaps.min.js' %}"></script>  
+    <script src="{% static 'js/menu.js' %}"></script> 
+    <script src="{% static 'js/modernizr.js' %}"></script> 
+    <script src="{% static 'js/main.js' %}"></script>   
+</body>
+</html>
+

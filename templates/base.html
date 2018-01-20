@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>
+        {% block title %} {% endblock %}
+      </title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <style type="text/css">
+    .data a, .data span, .data tr, .data td ,p { white-space: pre-wrap; }
+
+      </style>
+      {% block custom_css %} {% endblock %}
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+
+    <body id="main_body"  >
+    <nav class=" cyan darken-4">
+    <div class="nav-wrapper container">
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <a href="#!" class="brand-logo " style="" ><i class="material-icons">donut_large</i>CES Svnit</a>
+
+      <ul class="right hide-on-med-and-down">
+     
+                  <li><a href="{% url 'events'%}" class="waves-effect">Welcome </a></li>
+                  <li><a href="" class="waves-effect">Logout</a></li>
+                  <li><a href="" class="waves-effect">Sendmail</a></li>
+                  <li><a href="" class="waves-effect">Add Student</a></li>
+             
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+      
+                  <li><a href="url 'events'" class="waves-effect">Welcome </a></li>
+                  <li><a href="" class="waves-effect">Logout</a></li>
+                  <li><a href="" class="waves-effect">Sendmail</a></li>
+                  <li><a href="" class="waves-effect">Add students</a></li>
+            
+      </ul>
+    </div>
+  </nav>
+     
+               
+        {% if request.user.is_authenticated%}
+            {% include 'admin_tab.html' %} 
+        {% endif %}
+          
+          {% for message in flash.notice %}
+                 {{ message }}
+        {% endfor %}
+      {% block body_block %}{% endblock %}
+
+       <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">CES Official</h5>
+                <p class="grey-text text-lighten-4">This site is build to provide Event Notification in SVNIT regarding upcoming events of CEV</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="">SendEmail</a></li>
+                    <li><a class="grey-text text-lighten-3" href="">Add Students</a></li>
+                    <li><a class="grey-text text-lighten-3" href="">Add Students using Excel sheet</a></li>
+                    <li><a class="grey-text text-lighten-3" href="">CEV SITE</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright CEV
+            <a class="grey-text text-lighten-4 right" href="#!">About</a>
+            </div>
+          </div>
+        </footer>
+
+
+
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script type="text/javascript">
+  $(document).ready(function() {
+    $('select').material_select();
+    });
+  $( document ).ready(function(){
+        $(".button-collapse").sideNav();
+  })
+</script>
+
+      {% block custom_js %} {% endblock %}
+    </body>
+  </html>

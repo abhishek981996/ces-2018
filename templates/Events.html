@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block title %} Events {% endblock %}
+
+
+{% block body_block %}
+
+<div id="content" style="min-height: calc(100vh - 120px);">
+  <div class="section"> </div>
+        <div class="section" id="form_errors">
+        {% if messages %}
+          <ul class="collection green-text center">
+            {% for message in messages %}
+              <li class="collection-item">{{ message }} </li>
+              {% endfor %}
+                {% endif %}
+      </div>
+
+      <div class="container">
+      {% if event_list%}
+            {% for two_events in event_list %}
+              <div class="row">
+                  {% for event in two_events %}
+                    <div class="col s12 m6 l6">
+                      <div class="card z-depth-2 hoverable">
+                       
+                          <div class="card-content grey-text text-lighten-5 grey darken-1 z-depth-1">
+                            <span class="card-title truncate"> {{ event.event_name }} </span>
+
+                                <p> {{ event.location }} </p>
+                          </div>
+                          <table class="bordered centered responsive-table grey lighten-5">
+                            <tr>
+                              <td> <strong> Venue </strong> </td>
+                                  <td> {{ event.location }}  </td>
+                                  
+                            </tr>
+
+                            <tr>
+                              <td> <strong> Time </strong> </td>
+                              <td> {{ event.Datetime|date:'g:i A, j M, D' }} </td>
+                            </tr>
+                          </table>
+
+                           <div class="card-action grey lighten-5 center">
+                            <div class="grey-text text-darken-2 " >
+                              <!--  <a href="{% url 'registration' event.event_id %}" class="colorless waves-effect waves-light btn modal-trigger"><strong> MORE DETAILS </strong> -->
+                              
+                              <a href="{% url 'registration' event.event_id %}" class="colorless waves-effect waves-light btn"><strong> Register Now </strong>
+                               <!--  <i class="material-icons right">arrow_drop_down_circle</i> -->
+                                </a>
+                                </div>
+                                </div>
+                          <div class="card-action grey lighten-5 center grey-text text-darken-2">
+                            
+                              <!--  <a href="{% url 'registration' event.event_id %}" class="colorless waves-effect waves-light btn modal-trigger"><strong> MORE DETAILS </strong> -->
+                              
+                              <a href="#{{event.event_id}}" class="colorless waves-effect waves-light btn modal-trigger"><strong> MORE DETAILS </strong>
+                                <i class="material-icons right">arrow_drop_down_circle</i>
+                                </a>
+                                  
+                                <!-- Modal Structure -->
+                              <div id="{{event.event_id}}" class="modal modal-fixed-footer">
+                                   <div class="modal-content">
+                                     <h4 class = "center">{{ event.event_name }}</h4>
+                                     <hr>
+                                       <p>{{event.Description}}</p>
+                                       {% if event.download %}
+                                       <a href="{% url 'Download' event.event_id %}" class="waves-effect waves-green center">See Rules <i class="material-icons left">get_app</i></a>
+                                       {% endif %}
+                                    </div>
+                                    <div class="modal-footer">
+                                    
+                                    <a href="{% url 'registration' event.event_id %}" class="modal-action modal-close waves-effect waves-green btn center">Register Now</a>
+                                    </div>
+                               
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  {% endfor %}
+              </div>
+            {% endfor %}
+
+         {% else %}
+          <h5 class="center grey-text text-darken-3"> No Events Available! </h5>
+      {% endif %}
+        </div>
+      </div>
+
+{% endblock%}
+      {% block custom_js %} 
+
+      <script type="text/javascript" charset="utf-8" async defer>
+        $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+      </script>
+
+      {% endblock %}
