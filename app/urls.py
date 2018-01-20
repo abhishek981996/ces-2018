@@ -17,7 +17,7 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from . import views
 urlpatterns = [
-	url(r'^$',views.Index,name="index"),
+	# url(r'^$',views.Index,name="index"),
     # url(r'^login/$',views.Login,name='Login'),
     # url(r'^logout/$',views.Logout,name='Logout'),
     # url(r'^registration/(?P<event_id>\d+)/$',views.Registrations,name = "registration" ),
