@@ -18,10 +18,10 @@ from django.contrib import admin
 from . import views
 urlpatterns = [
 	url(r'^$',views.Index,name="index"),
-    url(r'^login/$',views.Login,name='Login'),
-    url(r'^logout/$',views.Logout,name='Logout'),
-    url(r'^registration/(?P<event_id>\d+)/$',views.Registrations,name = "registration" ),
-    url(r'^view_registration/$',views.ViewRegistraion,name = 'ViewRegistration'),
-    url(r'^ExcelData/(?P<event_id>\d+)/$',views.ExcelData , name = "ExcelData"),
+    # url(r'^login/$',views.Login,name='Login'),
+    # url(r'^logout/$',views.Logout,name='Logout'),
+    # url(r'^registration/(?P<event_id>\d+)/$',views.Registrations,name = "registration" ),
+    # url(r'^view_registration/$',views.ViewRegistraion,name = 'ViewRegistration'),
+    # url(r'^ExcelData/(?P<event_id>\d+)/$',views.ExcelData , name = "ExcelData"),
     
 ]
