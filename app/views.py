@@ -16,7 +16,7 @@ import app.Constant as Constant
 import xlwt
 from django.contrib import messages as info
 from datetime import datetime
-
+from events.views import Events
 
 OPTIONS = (
 	(1,Constant.UserName),
@@ -39,11 +39,11 @@ def Login(request):
 		user = authenticate(request, username=username, password=password)
 		if user is not None:
 			login(request, user)
-			return redirect(AddEvent)
+			return redirect(Events)
 		message = "Login failed,error login"
 		return render(request,"login.html",{'error':message})
 	elif request.user.is_authenticated:
-		return redirect(AddEvent)
+		return redirect(Events)
 	else:
 		return render(request,"login.html")
 		

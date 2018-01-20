@@ -21,9 +21,17 @@ import app.Constant as Constant
 import xlwt
 from django.contrib import messages as info
 from datetime import datetime
-from app.views import grouper
 
 
+
+
+def grouper(n, iterable):
+    """
+    >>> list(grouper(3, 'ABCDEFG'))
+    [['A', 'B', 'C'], ['D', 'E', 'F'], ['G']]
+    """
+    iterable = iter(iterable)
+    return iter(lambda: list(it.islice(iterable, n)), [])
 
 
 def Events(request):
