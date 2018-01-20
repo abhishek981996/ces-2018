@@ -21,9 +21,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^',include('app.urls')),
-    url(r'^event/',include('events.urls')),
-    url(r'^email/',include('Email.urls'))
+    # url(r'^',include('app.urls')),
+    # url(r'^event/',include('events.urls')),
+    # url(r'^email/',include('Email.urls'))
 ]
 
 if settings.DEBUG:
