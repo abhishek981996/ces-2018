@@ -6,6 +6,7 @@ from django.shortcuts import render
 # Create your views here.
 from datetime import date, datetime
 import itertools as it
+from django.core.urlresolvers import reverse
 
 import json
 from django.shortcuts import render,get_object_or_404
@@ -84,7 +85,7 @@ def AddEvent(request):
 			event_form.save()
 			
 			info.add_message(request, info.INFO, message)
-			return HttpResponseRedirect('/event/view_events/')
+			return HttpResponseRedirect(reverse('events'))
 
 	else:
 		eventform = EventForm()

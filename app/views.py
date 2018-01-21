@@ -7,6 +7,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
+from django.core.urlresolvers import reverse
 from django.contrib.auth import authenticate, login,logout
 from django.contrib.auth.decorators import login_required
 
@@ -243,7 +244,7 @@ def Registrations(request,event_id):
 
 			message = "Successfully registered for the %s Event"%event.Eventname
 			info.add_message(request, info.INFO, message)
-			return HttpResponseRedirect("event/view_events/ ")
+			return HttpResponseRedirect(reverse('events'))
 		else:
 			return render(request,"registration.html",{
 			'usernameform':usernameform,
@@ -372,7 +373,9 @@ def ExcelData(request,event_id):
 	response = HttpResponse(content_type='application/ms-excel')
 
 	#decide file name
-	response['Content-Disposition'] = 'attachment; filename='+event.Eventname
+	filename = '-'.join(event.Eventname.split(' '))
+	filename +="-Data.xlsx"
+	response['Content-Disposition'] = 'attachment; filename='+filename
 
 	#creating workbook
 	wb = xlwt.Workbook(encoding='utf-8')
