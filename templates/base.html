@@ -16,14 +16,12 @@
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-
-
     <body id="main_body"  >
     <nav class=" cyan darken-4">
     <div class="nav-wrapper container">
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
-            <a href="#!" class="brand-logo " style="" ><i class="material-icons">donut_large</i>CES Svnit</a>
+            <a href="#!" class="brand-logo " style="" ><i class="material-icons">donut_large</i>Kaizen 4.0</a>
 
       <ul class="right hide-on-med-and-down">
      
@@ -54,34 +52,29 @@
         {% endfor %}
       {% block body_block %}{% endblock %}
 
-       <footer class="page-footer">
+       <footer class="page-footer cyan darken-4">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">CES Official</h5>
-                <p class="grey-text text-lighten-4">This site is build to provide Event Notification in SVNIT regarding upcoming events of CEV</p>
+                <p class="grey-text text-lighten-4">This site is build to provide Event Notification in SVNIT regarding upcoming events of CES</p>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="">SendEmail</a></li>
-                    <li><a class="grey-text text-lighten-3" href="">Add Students</a></li>
-                    <li><a class="grey-text text-lighten-3" href="">Add Students using Excel sheet</a></li>
-                    <li><a class="grey-text text-lighten-3" href="">CEV SITE</a></li>
-                  
+                    <li><a class="grey-text text-lighten-3" href="{% url 'index'%}">Home</a></li>
+                    <li><a class="grey-text text-lighten-3" href="{' url 'events'}">Events</a></li>  
                 </ul>
               </div>
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2018 Copyright CEV
+            © 2018 Copyright CES
             <a class="grey-text text-lighten-4 right" href="#!">About</a>
             </div>
           </div>
         </footer>
-
-
 
 
       <!--Import jQuery before materialize.js-->

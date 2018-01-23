@@ -21,6 +21,7 @@ def choicefields():
     return event_list
 
 
+
 event_list = choicefields()
 class SendEmailForm(forms.Form):
     subject = forms.CharField(max_length=100,required=True)

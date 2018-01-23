@@ -62,8 +62,6 @@ class Event(models.Model):
 	RequiredFields = MultiSelectField(max_length = 50 ,choices = OPTIONS)
 	created_date = models.DateTimeField(auto_now_add=True)
 	document = models.FileField(upload_to='Media/',blank=True)
-    
-
 	def __str__(self):
 		return "{}, {}, {}".format(
 			self.Eventname, self.Location, self.id)
@@ -80,7 +78,6 @@ class UserName(models.Model):
 #     verbose_name="Registration details",
 #     blank=True,
 # )
-
 
 	def __str__(self):
 		return "{}, {}".format(self.first_name,self.last_name)
