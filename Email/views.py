@@ -68,7 +68,7 @@ def Email(userlist,subject,body):
 	send_list = []
 	errorlist = []
 	for user in userlist:
-		email1 = user.Email
+		email1 = user.email.emailid
 		email = EmailMessage(subject,body,to=[email1])
 		email.content_subtype = "html"
 		try:
