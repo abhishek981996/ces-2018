@@ -369,13 +369,14 @@ def ViewRegistraion(request):
 @login_required
 def ExcelData(request,event_id):
 	# content-type of response
+
 	event = Event.objects.get(id=event_id)
 	response = HttpResponse(content_type='application/ms-excel')
 
 	#decide file name
 	filename = '-'.join(event.Eventname.split(' '))
 	filename +="-Data.xlsx"
-	response['Content-Disposition'] = 'attachment; filename='+filename
+	response['Content-Disposition'] = 'attachment; filename=%s'%filename
 
 	#creating workbook
 	wb = xlwt.Workbook(encoding='utf-8')
