@@ -405,7 +405,14 @@ def ExcelData(request,event_id):
         smart_str(Constant.FirstName),
         smart_str(Constant.LastName),
         smart_str(Constant.Emailid),
-        smart_str(Constant.AdmissionNo)
+        smart_str(Constant.AdmissionNo),
+        smart_str(Constant.PhoneNo),
+        smart_str(Constant.Branch),
+        smart_str(Constant.Year),
+        smart_str(Constant.Degree),
+        smart_str(Constant.TeamName),
+        smart_str(Constant.Gender),
+        smart_str(Constant.Idea)
     ])
 	#write column headers in sheetBranch
 	# for col_num in range(len(columns)):
@@ -419,37 +426,69 @@ def ExcelData(request,event_id):
 
 	for my_row in registration:
 
-		# row_num = row_num + 1
-		# if my_row.username:
-		# 	ws.write(row_num, 0, my_row.username.first_name, font_style)
-		# 	ws.write(row_num, 1, my_row.username.last_name, font_style)
+		if my_row.username:
+			first_name = my_row.username.first_name
+			last_name = my_row.username.last_name
+		else:
+			first_name = ""
+			last_name = ""
+
 		
-		# if my_row.email:
-		# 	ws.write(row_num, 2, my_row.email.emailid, font_style)
+		if my_row.email:
+			emailid = my_row.email.emailid
 
-		# if my_row.admissionno:
-		# 	ws.write(row_num, 3, my_row.admissionno.admission_no, font_style)
-		# if my_row.phoneno:
-		# 	ws.write(row_num, 4, my_row.phoneno.phone_number, font_style)
+		else:
+			emailid = ""
+
+		if my_row.admissionno:
+			admission_no = my_row.admissionno.admission_no
+
+		else:
+			admission_no = ""
+
+		if my_row.phoneno:
+			phone_number = my_row.phoneno.phone_number
+		else:
+			phone_number = ""
 		
-		# if my_row.branch:
-		# 	ws.write(row_num, 5, my_row.branch.branch_name, font_style)
-		# 	ws.write(row_num, 7, my_row.branch.degree, font_style)
-		# 	ws.write(row_num, 6, my_row.branch.year, font_style)
-		# if my_row.teamname:
-		# 	ws.write(row_num, 8, my_row.teamname.team_name , font_style)
+		if my_row.branch:
+			branch_name = my_row.branch.branch_name
+			degree = my_row.branch.degree
+			year =  my_row.branch.year
+		else:
+			branch_name =""
+			degree =""
+			year =  ""
 
-		# if my_row.gender:
-		# 	ws.write(row_num, 9, my_row.gender.genders , font_style)
+		if my_row.teamname:
+			team_name = my_row.teamname.team_name
+		else:
+			team_name = ""
 
-		# if my_row.idea:
-		# 	ws.write(row_num, 10, my_row.idea.ideas , font_style)
+		if my_row.gender:
+			genders = my_row.gender.genders
+		else:
+			genders = ""
+
+		if my_row.idea:
+			ideas = my_row.idea.ideas
+		else:
+			ideas = ""
+
 
 
 		writer.writerow([
-            smart_str(my_row.username.first_name),
-            smart_str(my_row.username.last_name),
-            smart_str(my_row.email.emailid),
+            smart_str(first_name),
+            smart_str(last_name),
+            smart_str(emailid),
+            smart_str(admission_no),
+            smart_str(phone_number),
+            smart_str(branch_name),
+            smart_str(degree),
+            smart_str(year),
+            smart_str(team_name),
+            smart_str(genders),
+            smart_str(ideas)
         ])
 
 	# wb.save(response)
