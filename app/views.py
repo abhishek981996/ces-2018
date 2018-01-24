@@ -376,8 +376,8 @@ def ExcelData(request,event_id):
 	# response = HttpResponse(content_type='application/ms-excel')
 
 	#decide file name
-	# filename = '-'.join(event.Eventname.split(' '))
-	# filename +="-Data.xlsx"
+	filename = '-'.join(event.Eventname.split(' '))
+	filename +="-Data.csv"
 	# response['Content-Disposition'] = 'attachment; filename=%s'%filename
 
 	# #creating workbook
@@ -392,8 +392,8 @@ def ExcelData(request,event_id):
 	# font_style = xlwt.XFStyle()
 	# # headers are bold
 	# font_style.font.bold = True
-	response = HttpResponse(content_type='text/csv')
-	response['Content-Disposition'] = 'attachment; filename=mymodel.csv'
+	response = HttpResponse(content_type='text/csv') 
+	response['Content-Disposition'] = 'attachment; filename=%s'%filename
 	writer = csv.writer(response, csv.excel)
 	response.write(u'\ufeff'.encode('utf8'))
 	#column header names, you can use your own headers here
