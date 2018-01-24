@@ -57,7 +57,7 @@ def SendMail(request):
 
 
 
-def Email(registraions,subject,body):
+def Email(userlist,subject,body):
 	tag_open = """<pre style = "font-family:Arial">"""
 	tag_close = """</pre>"""
 	tag_open+= body
