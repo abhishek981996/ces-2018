@@ -18,6 +18,8 @@ import xlwt
 from django.contrib import messages as info
 from datetime import datetime
 from events.views import Events
+import csv
+from django.utils.encoding import smart_str
 
 OPTIONS = (
 	(1,Constant.UserName),
@@ -371,67 +373,84 @@ def ExcelData(request,event_id):
 	# content-type of response
 
 	event = Event.objects.get(id=event_id)
-	response = HttpResponse(content_type='application/ms-excel')
+	# response = HttpResponse(content_type='application/ms-excel')
 
 	#decide file name
-	filename = '-'.join(event.Eventname.split(' '))
-	filename +="-Data.xlsx"
-	response['Content-Disposition'] = 'attachment; filename=%s'%filename
+	# filename = '-'.join(event.Eventname.split(' '))
+	# filename +="-Data.xlsx"
+	# response['Content-Disposition'] = 'attachment; filename=%s'%filename
 
-	#creating workbook
-	wb = xlwt.Workbook(encoding='utf-8')
+	# #creating workbook
+	# wb = xlwt.Workbook(encoding='utf-8')
 
-	#adding sheet
-	ws = wb.add_sheet("sheet1")
+	# #adding sheet
+	# ws = wb.add_sheet("sheet1")
 
-	# Sheet header, first row
-	row_num = 0
+	# # Sheet header, first row
+	# row_num = 0
 
-	font_style = xlwt.XFStyle()
-	# headers are bold
-	font_style.font.bold = True
-
+	# font_style = xlwt.XFStyle()
+	# # headers are bold
+	# font_style.font.bold = True
+	response = HttpResponse(content_type='text/csv')
+	response['Content-Disposition'] = 'attachment; filename=mymodel.csv'
+	writer = csv.writer(response, csv.excel)
+	response.write(u'\ufeff'.encode('utf8'))
 	#column header names, you can use your own headers here
 	columns = [Constant.FirstName, Constant.LastName, Constant.Emailid , Constant.AdmissionNo,
 	Constant.PhoneNo,Constant.Branch,Constant.Year,Constant.Degree,Constant.TeamName,Constant.Gender, Constant.Idea]
 
-	#write column headers in sheetBranch
-	for col_num in range(len(columns)):
-		ws.write(row_num, col_num, columns[col_num], font_style)
 
-	# Sheetdegree body, remaining rows
-	font_style = xlwt.XFStyle()
+	writer.writerow([
+        smart_str(Constant.FirstName),
+        smart_str(Constant.LastName),
+        smart_str(Constant.Emailid),
+        smart_str(Constant.AdmissionNo)
+    ])
+	#write column headers in sheetBranch
+	# for col_num in range(len(columns)):
+	# 	ws.write(row_num, col_num, columns[col_num], font_style)
+
+	# # Sheetdegree body, remaining rows
+	# font_style = xlwt.XFStyle()
 
 	#get your data, from database or from a text file...
 	registration = Registration.objects.filter(event = event)
 
 	for my_row in registration:
 
-		row_num = row_num + 1
-		if my_row.username:
-			ws.write(row_num, 0, my_row.username.first_name, font_style)
-			ws.write(row_num, 1, my_row.username.last_name, font_style)
+		# row_num = row_num + 1
+		# if my_row.username:
+		# 	ws.write(row_num, 0, my_row.username.first_name, font_style)
+		# 	ws.write(row_num, 1, my_row.username.last_name, font_style)
 		
-		if my_row.email:
-			ws.write(row_num, 2, my_row.email.emailid, font_style)
+		# if my_row.email:
+		# 	ws.write(row_num, 2, my_row.email.emailid, font_style)
 
-		if my_row.admissionno:
-			ws.write(row_num, 3, my_row.admissionno.admission_no, font_style)
-		if my_row.phoneno:
-			ws.write(row_num, 4, my_row.phoneno.phone_number, font_style)
+		# if my_row.admissionno:
+		# 	ws.write(row_num, 3, my_row.admissionno.admission_no, font_style)
+		# if my_row.phoneno:
+		# 	ws.write(row_num, 4, my_row.phoneno.phone_number, font_style)
 		
-		if my_row.branch:
-			ws.write(row_num, 5, my_row.branch.branch_name, font_style)
-			ws.write(row_num, 7, my_row.branch.degree, font_style)
-			ws.write(row_num, 6, my_row.branch.year, font_style)
-		if my_row.teamname:
-			ws.write(row_num, 8, my_row.teamname.team_name , font_style)
+		# if my_row.branch:
+		# 	ws.write(row_num, 5, my_row.branch.branch_name, font_style)
+		# 	ws.write(row_num, 7, my_row.branch.degree, font_style)
+		# 	ws.write(row_num, 6, my_row.branch.year, font_style)
+		# if my_row.teamname:
+		# 	ws.write(row_num, 8, my_row.teamname.team_name , font_style)
 
-		if my_row.gender:
-			ws.write(row_num, 9, my_row.gender.genders , font_style)
+		# if my_row.gender:
+		# 	ws.write(row_num, 9, my_row.gender.genders , font_style)
 
-		if my_row.idea:
-			ws.write(row_num, 10, my_row.idea.ideas , font_style)
+		# if my_row.idea:
+		# 	ws.write(row_num, 10, my_row.idea.ideas , font_style)
 
-	wb.save(response)
+
+		writer.writerow([
+            smart_str(my_row.username.first_name),
+            smart_str(my_row.username.last_name),
+            smart_str(my_row.email.emailid),
+        ])
+
+	# wb.save(response)
 	return response
