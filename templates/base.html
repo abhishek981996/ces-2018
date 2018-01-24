@@ -4,13 +4,24 @@
       <title>
         {% block title %} {% endblock %}
       </title>
+
+    {% block meta %} {% endblock %}
+
+      <link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+    <!--Icon-->
+    <link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
       <style type="text/css">
     .data a, .data span, .data tr, .data td ,p { white-space: pre-wrap; }
+    span a{
+      margin-left: 12px;
+      color: white;
 
+    }
       </style>
       {% block custom_css %} {% endblock %}
 
@@ -54,7 +65,19 @@
             <div class="row">
               <div class="col l6 s12">
                 <h5 class="white-text">CES Official</h5>
-                <p class="grey-text text-lighten-4">Found a bug? Help us to make this site much better <b>Contact the developer:9998705087 </b> </p>
+                <p class="grey-text text-lighten-4">Found a bug? Help us to make this site much better <br><b>Contact the developer:<span style="display:inline-flex;">
+                                <a href="https://www.facebook.com/ces.nitsurat/"><i class="fa fa-facebook"></i></a>
+                                  <a href="mailto:abhishektiwari@cevgroup.org"><i class="material-icons">email</i></a>
+                            
+                  <!--   <a href="mailto:joe@example.com?subject=feedback" "email me">
+                        <i class="material-icons">email</i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100003275864360" title="">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </a> -->
+                    </span>
+                    </b> 
+                    </p>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
