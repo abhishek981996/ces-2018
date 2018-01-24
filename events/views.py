@@ -37,7 +37,7 @@ def grouper(n, iterable):
 
 def Events(request):
 	"""Display all the available events"""
-	events =  Event.objects.all().order_by('-Dateime')
+	events =  Event.objects.all().order_by('Dateime')
 	if events:
 		event_list = []
 		for event in events:
