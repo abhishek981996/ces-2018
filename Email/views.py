@@ -43,7 +43,13 @@ def SendMail(request):
 			value1 = SendEmailform.cleaned_data['Select_Event']
 			event = Event.objects.get(id=value1)
 			registraions = Registration.objects.filter(event=event)
-			Email(registraions,subject,body)
+			email_aaray = []
+			for user in registraions:
+				email1 = user.email.emailid
+				email_aaray.append(email1)
+
+
+			Email(list(set(email_aaray)),subject,body)
 
 			messages = "Email send succesfully"
 			return render(request,'form.html',{'SendEmailform':SendEmailform,"messages":messages})
@@ -68,16 +74,15 @@ def Email(userlist,subject,body):
 	send_list = []
 	errorlist = []
 	for user in userlist:
-		email1 = user.email.emailid
-		email = EmailMessage(subject,body,to=[email1])
+		email = EmailMessage(subject,body,to=[user])
 		email.content_subtype = "html"
 		try:
 			value = email.send()
 			time.sleep(.3)
-			send_list.append(email1)
+			send_list.append(user)
 		except:
 			time.sleep(1)
-			errorlist.append(email1)
+			errorlist.append(user)
 
 	body+= " success mail  = "
 	body +=str(send_list)
